@@ -85,7 +85,8 @@ class Hw1(QMainWindow):
             self.show_message('Please run \"3.3 Sobel Y\" first!')
             return
         win_title = 'Q3.3 Magnitude'
-        self.mag_img = np.sqrt(self.sobel_x_img.astype(dtype=np.int) ** 2 + self.sobel_y_img.astype(dtype=np.int) ** 2)
+        self.mag_img = np.sqrt(self.sobel_x_img.astype(
+            dtype=np.int) ** 2 + self.sobel_y_img.astype(dtype=np.int) ** 2)
         self.mag_img = self.mag_img.astype(dtype=self.gaussian_img.dtype)
         cv2.imshow(win_title, self.mag_img)
         cv2.waitKey(0)
@@ -114,7 +115,8 @@ class Hw1(QMainWindow):
 
     def gaussian_blur_3(self):  # Q3.1
         win_title = ['Q3.1 Original', 'Q3.1 Gaussian Blur']
-        img = cv2.imread('Dataset_opencvdl/Q3_Image/Chihiro.jpg', cv2.IMREAD_GRAYSCALE)
+        img = cv2.imread(
+            'Dataset_opencvdl/Q3_Image/Chihiro.jpg', cv2.IMREAD_GRAYSCALE)
         cv2.imshow(win_title[0], img)
         # Create filter
         size = 3
@@ -171,7 +173,7 @@ class Hw1(QMainWindow):
         cv2.imshow(win_title, img)
         print("Height = ", str(img.shape[0]))
         print("Width = ", str(img.shape[1]))
-        cv2.waitKey()
+        cv2.waitKey(0)
         cv2.destroyWindow(win_title)
 
     @staticmethod
@@ -196,7 +198,7 @@ class Hw1(QMainWindow):
         img_flip = cv2.flip(img, flipCode=1)
         cv2.imshow(win_title[1], img_flip)
         print('Press any key to close the windows...')
-        cv2.waitKey()
+        cv2.waitKey(0)
         for win in win_title:
             cv2.destroyWindow(win)
 
@@ -204,7 +206,8 @@ class Hw1(QMainWindow):
     def blend():
         trackbar = myFunc.TrackBar_1_4('BLEND', 'Q1.4 Blend', 255)
         cv2.waitKey(0)
-        trackbar.__del__()
+        trackbar.delfunc()
+        del trackbar
 
     @staticmethod
     def show_message(text):
