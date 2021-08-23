@@ -1,13 +1,16 @@
 ### USER DEFINE ###
 hw2/Datasets
-
+hw2/model
+hw2/other
+hw2/other.rar
+# *.zip
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 # all
 .idea
 *.exe
-*.zip
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
